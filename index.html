@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medication Reminder</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container" id="fc">
+        <div id="medicationReminderApp" class="card">
+            <h1 class="title">Medication Reminder</h1>
+            <form id="medicationForm" class="form">
+                <div class="input-group">
+                    <label for="medicationName">Medication Name:</label>
+                    <input type="text" id="medicationName" required>
+                </div>
+                <div class="input-group">
+                    <label for="dosage">Dosage (e.g., 2 pills):</label>
+                    <input type="text" id="dosage" required>
+                </div>
+                <div class="input-group">
+                    <label for="frequency">Frequency (hours):</label>
+                    <input type="number" id="frequency" min="1" required>
+                </div>
+                <button type="submit" class="btn">Set Reminder</button>
+            </form>
+            <div id="notificationArea" class="notification"></div>
+        </div>
+    </div>
+
+
+    <div class="container" id="sc" style="display: none;"> 
+        <div id="medicationReminderApp" class="card">
+            <h1 class="title">Time To Take Your Medicament</h1>
+            <h3 ></h3>
+            <div class="buttons">
+                <button  type="submit" id="again">OK , Thanks </button>
+                <button type="submit" id="new">New Medicament</button>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="container" id="tc" style="display: none;"> 
+        <div id="medicationReminderApp" class="card">
+            <h1 class="title">Wait For Next Time</h1>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
